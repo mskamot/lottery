@@ -53,7 +53,7 @@ public class BetsController {
 	 * 
 	 * @param  betsInput BetsInput
 	 * @return BetsOutput
-     * @see    org.springframework.web.bind.annotation.PostMapping
+	 * @see    org.springframework.web.bind.annotation.PostMapping
 	 * @see    br.com.wtag.lottery.model.output.BetsOutput
 	 * @see    org.springframework.web.bind.annotation.RequestBody
 	 * @see    javax.validation.Valid
