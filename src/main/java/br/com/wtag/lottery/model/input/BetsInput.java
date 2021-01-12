@@ -18,11 +18,11 @@ import lombok.NoArgsConstructor;
  * @see     lombok.Data
  * @see     lombok.NoArgsConstructor
  * @see     java.lang.Long
- * @see		javax.validation.constraints.NotNull
- * @see		javax.validation.constraints.NotEmpty
- * @see		javax.validation.constraints.Email
+ * @see     javax.validation.constraints.NotNull
+ * @see     javax.validation.constraints.NotEmpty
+ * @see     javax.validation.constraints.Email
  * @see     javax.validation.constraints.Size
- * @see		java.lang.String
+ * @see     java.lang.String
  * @since   1.0.0
  * @version 1.0.0, 12 Jan 2021
  */
