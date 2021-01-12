@@ -10,7 +10,7 @@ import br.com.wtag.lottery.model.entity.RandomNumbers;
  * Lottery math.
  *
  * @author  Mario Sakamoto <mskamot@gmail.com>
- * @see		java.lang.String
+ * @see     java.lang.String
  * @see     java.lang.Integer
  * @since   1.0.0
  * @version 1.0.0, 12 Jan 2021

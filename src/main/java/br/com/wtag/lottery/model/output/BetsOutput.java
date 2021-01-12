@@ -18,8 +18,8 @@ import lombok.NoArgsConstructor;
  * @see     lombok.NoArgsConstructor
  * @see     lombok.AllArgsConstructor
  * @see     java.lang.Long
- * @see		java.lang.String
- * @see		com.fasterxml.jackson.annotation.JsonFormat
+ * @see     java.lang.String
+ * @see     com.fasterxml.jackson.annotation.JsonFormat
  * @see     java.time.LocalDateTime
  * @see     java.util.List
  * @see     br.com.wtag.lottery.model.output.RandomNumbersOutput
