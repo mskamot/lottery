@@ -23,23 +23,23 @@ import lombok.NoArgsConstructor;
  * RandomNumbers.
  *
  * @author  Mario Sakamoto <mskamot@gmail.com>
- * @see		javax.persistence.Entity
+ * @see     javax.persistence.Entity
  * @see     lombok.Data
  * @see     lombok.NoArgsConstructor
  * @see     lombok.AllArgsConstructor
- * @see		javax.persistence.Id
- * @see		javax.persistence.GeneratedValue
+ * @see     javax.persistence.Id
+ * @see     javax.persistence.GeneratedValue
  * @see     javax.persistence.GenerationType
  * @see     java.lang.Long
- * @see		javax.validation.constraints.NotNull
+ * @see     javax.validation.constraints.NotNull
  * @see     javax.validation.constraints.Min
  * @see     javax.validation.constraints.Max
- * @see		javax.persistence.Column
+ * @see     javax.persistence.Column
  * @see     java.time.LocalDateTime
- * @see		java.lang.Integer
+ * @see     java.lang.Integer
  * @see     javax.persistence.ManyToOne;
- * @see		javax.persistence.FetchType
- * @see		org.hibernate.annotations.Fetch
+ * @see     javax.persistence.FetchType
+ * @see     org.hibernate.annotations.Fetch
  * @see     org.hibernate.annotations.FetchMode
  * @see     javax.persistence.JoinColumn
  * @see     br.com.wtag.lottery.model.entity.Bets;
