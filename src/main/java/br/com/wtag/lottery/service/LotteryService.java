@@ -29,11 +29,11 @@ public class LotteryService {
 	 * @param  max Integer
 	 * @param  randomNumberListForExclude List<RandomNumbers>
 	 * @return Integer
-     * @see    java.lang.Integer  
-     * @see    java.util.List
-     * @see    br.com.wtag.lottery.model.entity.RandomNumbers
-     * @see    java.lang.IllegalArgumentException
-     * @see    java.util.Random
+	 * @see    java.lang.Integer  
+	 * @see    java.util.List
+	 * @see    br.com.wtag.lottery.model.entity.RandomNumbers
+	 * @see    java.lang.IllegalArgumentException
+	 * @see    java.util.Random
 	 */
 	public static Integer getRandomNumber(final Integer min, final Integer max, 
 			final List<RandomNumbers> randomNumberListForExclude) {
