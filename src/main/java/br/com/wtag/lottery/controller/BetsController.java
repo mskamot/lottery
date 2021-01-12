@@ -26,11 +26,11 @@ import br.com.wtag.lottery.service.LotteryService;
  * Bets controller.
  *
  * @author  Mario Sakamoto <mskamot@gmail.com>
- * @see		org.springframework.web.bind.annotation.RestController
+ * @see     org.springframework.web.bind.annotation.RestController
  * @see     org.springframework.web.bind.annotation.RequestMapping
  * @see     org.springframework.beans.factory.annotation.Autowired
- * @see		br.com.wtag.lottery.model.repository.BetsRepository
- * @see		br.com.wtag.lottery.model.repository.RandomNumbersRepository
+ * @see     br.com.wtag.lottery.model.repository.BetsRepository
+ * @see     br.com.wtag.lottery.model.repository.RandomNumbersRepository
  * @see     java.lang.Integer
  * @since   1.0.0
  * @version 1.0.0, 12 Jan 2021
