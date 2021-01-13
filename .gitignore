@@ -1,8 +1,0 @@
-target/
-.settings
-.classpath
-.factorypath
-.gitignore
-.project
-HELP.md
-*.class
