@@ -94,8 +94,7 @@ public class BetsController {
 	 */
 	@GetMapping("/history/{email}")
 	public List<BetsOutput> read(@PathVariable String email) {
-		return betsRepository.findByEmailOrderByRegisteredAsc(email).stream().map(bets -> new BetsOutput(bets)).collect(
-				Collectors.toList());
+		return betsRepository.findByEmailOrderByRegisteredAsc(email).stream().map(bets -> new BetsOutput(bets)).collect(Collectors.toList());
 	}
 
 }
