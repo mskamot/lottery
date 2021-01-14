@@ -62,13 +62,13 @@ public class LotteryService {
 	 * @see    java.util.ArrayList
 	 */
 	public static List<Integer> getRandomNumberListForExclude(final List<RandomNumbers> randomNumberListForExclude) {
-		List<Integer> randomNumberList = new ArrayList<>();
-        if (randomNumberListForExclude != null && !randomNumberListForExclude.isEmpty()) {
-        	for (Integer x = ZERO; x < randomNumberListForExclude.size(); x++) {
-        		randomNumberList.add(randomNumberListForExclude.get(x).getRandomNumber());
-        	}
-        }
-        return randomNumberList;
+			List<Integer> randomNumberList = new ArrayList<>();
+		if (randomNumberListForExclude != null && !randomNumberListForExclude.isEmpty()) {
+			for (Integer x = ZERO; x < randomNumberListForExclude.size(); x++) {
+				randomNumberList.add(randomNumberListForExclude.get(x).getRandomNumber());
+			}
+		}
+		return randomNumberList;
 	}
 	
 }
