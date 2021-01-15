@@ -4,13 +4,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -37,8 +37,8 @@ import lombok.NoArgsConstructor;
  * @see     javax.validation.constraints.NotNull
  * @see     javax.validation.constraints.NotBlank
  * @see     javax.validation.constraints.Size
+ * @see     javax.validation.constraints.Email
  * @see     java.lang.String
- * @see     javax.persistence.Column
  * @see     java.time.LocalDateTime
  * @see     javax.persistence.OneToMany
  * @see     javax.persistence.FetchType
@@ -62,9 +62,9 @@ public class Bets {
 	@NotNull 
 	@NotBlank 
 	@Size(max=255)
+	@Email
 	private String email;
 	@NotNull
-	@Column(name = "registered")
 	private LocalDateTime registered;
 	@OneToMany(mappedBy="bets", fetch=FetchType.LAZY)
 	@Fetch(FetchMode.JOIN)
