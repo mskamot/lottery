@@ -41,11 +41,17 @@ public class LotteryService {
             throw new IllegalArgumentException(MAX_MUST_BE_GREATER_THAN_MIN);
         }
         Integer maximumNumberIncluded = max + ONE; 
-        Integer randomNumber = new Random().ints(min, maximumNumberIncluded).limit(ONE).findFirst().getAsInt();
+        Integer randomNumber = new Random().ints(min, maximumNumberIncluded)
+        		.limit(ONE)
+        		.findFirst()
+        		.getAsInt();
         List<Integer> randomNumberList = getRandomNumberListForExclude(randomNumberListForExclude);
         if (randomNumberList != null && !randomNumberList.isEmpty()) {
 	        while (randomNumberList.contains(randomNumber)) {
-	        	randomNumber = new Random().ints(min, maximumNumberIncluded).limit(ONE).findFirst().getAsInt();
+	        	randomNumber = new Random().ints(min, maximumNumberIncluded)
+	        			.limit(ONE)
+	        			.findFirst()
+	        			.getAsInt();
 	        }
         }
         return randomNumber;

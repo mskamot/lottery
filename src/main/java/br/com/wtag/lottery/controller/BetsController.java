@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,6 +44,8 @@ public class BetsController {
 	private BetsRepository betsRepository;
 	@Autowired
 	private RandomNumbersRepository randomNumbersRepository;
+	@Autowired
+	private ModelMapper modelMapper;
 	private static final Integer ONE = 1;
 	private static final Integer SIX = 6;
 	private static final Integer SIXTY = 60;
@@ -77,9 +80,13 @@ public class BetsController {
 			randomNumbersList.add(randomNumbers);
 		}
 		bets.setRandomNumbers(randomNumbersList);
-		return new BetsOutput(bets);
+		modelMapper.typeMap(Bets.class, BetsOutput.class)
+				.addMappings(mapper -> { 
+					mapper.map(Bets::getRandomNumbers, BetsOutput::setRandomNumbers);
+				}); 
+		return modelMapper.map(bets, BetsOutput.class);
 	}
-	
+	                                                                                                                                                               
 	/**
 	 * Read.
 	 * 
@@ -93,9 +100,11 @@ public class BetsController {
 	 * @see    java.util.stream.Collectors
 	 */
 	@GetMapping("/history/{email}")
-	public List<BetsOutput> read(@PathVariable String email) {
-		return betsRepository.findByEmailOrderByRegisteredAsc(email).stream().map(bets -> 
-				new BetsOutput(bets)).collect(Collectors.toList());
+	public List<BetsOutput> read(@PathVariable("email") String email) {
+		return betsRepository.findByEmailOrderByRegisteredAsc(email)
+				.stream()
+				.map(bets -> modelMapper.map(bets, BetsOutput.class))
+				.collect(Collectors.toList());
 	}
 
 }

@@ -31,7 +31,10 @@ import lombok.NoArgsConstructor;
 public class BetsInput {
 
 	private Long id;
-	@NotNull @NotEmpty @Email @Size(max=255)
+	@NotNull 
+	@NotEmpty 
+	@Size(max=255)
+	@Email
 	private String email;
 
 	/**

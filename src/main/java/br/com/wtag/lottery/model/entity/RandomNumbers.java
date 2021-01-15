@@ -15,6 +15,8 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -42,7 +44,8 @@ import lombok.NoArgsConstructor;
  * @see     org.hibernate.annotations.Fetch
  * @see     org.hibernate.annotations.FetchMode
  * @see     javax.persistence.JoinColumn
- * @see     br.com.wtag.lottery.model.entity.Bets;
+ * @see     br.com.wtag.lottery.model.entity.Bets
+ * @see     com.fasterxml.jackson.annotation.JsonBackReference
  * @since   1.0.0
  * @version 1.0.0, 12 Jan 2021
  */
@@ -62,7 +65,8 @@ public class RandomNumbers {
 	private Integer randomNumber;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@Fetch(FetchMode.JOIN)
-	@JoinColumn(name = "bet", nullable = false)	
+	@JoinColumn(name = "bet", nullable = false)
+	@JsonBackReference
 	private Bets bets;
 	
 }

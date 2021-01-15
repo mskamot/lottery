@@ -18,6 +18,8 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -44,6 +46,7 @@ import lombok.NoArgsConstructor;
  * @see     javax.persistence.FetchType
  * @see     org.hibernate.annotations.Fetch
  * @see     org.hibernate.annotations.FetchMode
+ * @see     com.fasterxml.jackson.annotation.JsonManagedReference
  * @see     java.util.List
  * @see     br.com.wtag.lottery.model.entity.RandomNumbers
  * @see     java.util.ArrayList
@@ -68,6 +71,7 @@ public class Bets {
 	private LocalDateTime registered;
 	@OneToMany(mappedBy="bets", fetch=FetchType.LAZY)
 	@Fetch(FetchMode.JOIN)
+	@JsonManagedReference
 	private List<RandomNumbers> randomNumbers = new ArrayList<>();
 	
 }

@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import br.com.wtag.lottery.model.entity.Bets;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,22 +30,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BetsOutput {
 
-	private Long id;
 	private String email;
 	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
 	private LocalDateTime registered;
-	private List<RandomNumbersOutput> randomNumbersOutput;
-	
-	/**
-	 * Bets output.
-	 * 
-	 * @param bets Bets
-	 * @see   br.com.wtag.lottery.model.entity.Bets
-	 * @see   br.com.wtag.lottery.model.output.RandomNumbersOutput
-	 */
-	public BetsOutput(Bets bets) {
-		this(bets.getId(), bets.getEmail(), bets.getRegistered(), 
-				new RandomNumbersOutput().getList(bets.getRandomNumbers()));
-	}
+	private List<RandomNumbersOutput> randomNumbers;
 	
 }
